@@ -3,6 +3,9 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "./page.module.scss";
 
+const basePath =
+  process.env.NODE_ENV === "production" ? "/next-portfolio-model" : "";
+
 export default function PortfolioPage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,7 +36,12 @@ export default function PortfolioPage() {
         } as React.CSSProperties
       }
     >
-      <div className={styles.backgroundImage} />
+      <div
+        className={styles.backgroundImage}
+        style={{
+          backgroundImage: `url(${basePath}/images/gallery/photo6.jpg)`,
+        }}
+      />
       <div className={styles.overlayMask} />
 
       <h1 className={styles.title}>
