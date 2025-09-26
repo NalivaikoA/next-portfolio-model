@@ -1,11 +1,14 @@
 import VideoPlayer from "@/components/video-player/video-player";
 import styles from "./intro-section.module.scss";
 
+const basePath =
+  process.env.NODE_ENV === "production" ? "/next-portfolio-model" : "";
+
 export default function IntroSection() {
   return (
     <>
       <div className={styles.videoContainer}>
-        <VideoPlayer src="/videos/hero-video.mp4" />
+        <VideoPlayer src={`${basePath}/videos/hero-video.mp4`} />
       </div>
       <div className={styles.textContent}>
         <h2>Привет, меня зовут Майя</h2>

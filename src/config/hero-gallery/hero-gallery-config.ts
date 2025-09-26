@@ -1,18 +1,21 @@
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/next-portfolio-model" : "";
+
 export const images = [
-  "./images/gallery/photo1.jpg",
-  "./images/gallery/photo2.jpg",
-  "./images/gallery/photo3.jpg",
-  "./images/gallery/photo4.jpg",
-  "./images/gallery/photo5.jpg",
-  "./images/gallery/photo6.jpg",
-  "./images/gallery/photo7.jpg",
-  "./images/gallery/photo8.jpg",
-  "./images/gallery/photo9.jpg",
-  "./images/gallery/photo10.jpg",
-  "./images/gallery/photo11.jpg",
-  "./images/gallery/photo12.jpg",
-  "./images/gallery/photo13.jpg",
-  "./images/gallery/photo14.jpg",
+  `${basePath}/images/gallery/photo1.jpg`,
+  `${basePath}/images/gallery/photo2.jpg`,
+  `${basePath}/images/gallery/photo3.jpg`,
+  `${basePath}/images/gallery/photo4.jpg`,
+  `${basePath}/images/gallery/photo5.jpg`,
+  `${basePath}/images/gallery/photo6.jpg`,
+  `${basePath}/images/gallery/photo7.jpg`,
+  `${basePath}/images/gallery/photo8.jpg`,
+  `${basePath}/images/gallery/photo9.jpg`,
+  `${basePath}/images/gallery/photo10.jpg`,
+  `${basePath}/images/gallery/photo11.jpg`,
+  `${basePath}/images/gallery/photo12.jpg`,
+  `${basePath}/images/gallery/photo13.jpg`,
+  `${basePath}/images/gallery/photo14.jpg`,
 ];
 
 export const responsive = {
