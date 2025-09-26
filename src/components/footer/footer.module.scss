@@ -1,0 +1,34 @@
+@import "../../styles/mixins";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 40px 40px 30px;
+  @include text-footnote();
+
+  > p {
+    text-align: center;
+  }
+}
+
+.author {
+  display: inline-flex;
+  align-items: center;
+  @include text-footnote();
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  @include text-footnote();
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent);
+    outline: none;
+  }
+}

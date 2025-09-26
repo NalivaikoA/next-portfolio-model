@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro_section {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+
+  @media (max-width: 900px) {
+    max-width: 650px;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    text-align: center;
+    margin: 60px auto 0;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 30px;
+    padding: 0;
+  }
+}
+
+.gallery_section {
+  margin-top: 4rem;
+
+  @media (max-width: 900px) {
+    margin-top: 2rem;
+  }
+}

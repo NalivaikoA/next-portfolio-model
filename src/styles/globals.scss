@@ -1,0 +1,49 @@
+@use "variables";
+@use "palette";
+@use "light";
+@use "dark";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Exo+2:wght@400;500;600&display=swap");
+:root {
+  --font-base: "Inter", sans-serif;
+  --font-display: "Exo 2", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  // overflow-x: hidden;
+  font-family: var(--font-base);
+  font-size: variables.$base-font-size;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// main {
+//   padding-top: 68px;
+// }
+
+// Будущая поддержка темной темы
+// html[data-theme="dark"] {
+//   @include dark.theme;
+// }

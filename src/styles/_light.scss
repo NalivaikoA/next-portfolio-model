@@ -1,0 +1,15 @@
+@use "palette" as *;
+
+:root {
+  --background: #{$white};
+  --foreground: #{$gray-900};
+  --border-color: #{$gray-200};
+  --accent: #{$accent};
+  --accent-pantone: #{$accent-pantone};
+  --accent-hover: #{$accent-hover};
+  --secondary: #{$secondary};
+  --muted: #{$muted};
+  --error: #{$error};
+  --success: #{$success};
+  --shadow: #{$shadow};
+}

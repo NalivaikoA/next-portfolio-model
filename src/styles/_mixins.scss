@@ -1,0 +1,88 @@
+@use "sass:list";
+@import "./variables";
+
+// Типографика
+@mixin text-styles(
+  $font-size: $font-size-base,
+  $line-height: $line-height-l,
+  $font-weight: normal,
+  $color: var(--foreground),
+  $text-transform: none,
+  $text-align: left
+) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  text-align: $text-align;
+}
+
+@mixin heading-1() {
+  @include text-styles($font-size-2xl, $line-height-l, 700);
+}
+
+@mixin heading-2() {
+  @include text-styles($font-size-xl, $line-height-l, 700);
+}
+
+@mixin heading-3() {
+  @include text-styles($font-size-l, $line-height-m, 600);
+}
+
+@mixin heading-4() {
+  @include text-styles($font-size-base, $line-height-m, 600);
+}
+
+@mixin heading-5() {
+  @include text-styles($font-size-base, $line-height-s, 600);
+}
+
+@mixin text-regular() {
+  @include text-styles();
+}
+
+@mixin text-button() {
+  @include heading-5();
+}
+
+@mixin text-input() {
+  @include text-styles($font-size-s, $line-height-s, 400);
+}
+
+@mixin text-tooltip-title() {
+  @include text-styles($font-size-s, $line-height-base, 600);
+}
+
+@mixin text-tooltip() {
+  @include text-styles($font-size-s, $line-height-base, 400);
+}
+
+@mixin text-footnote() {
+  @include text-input();
+}
+
+@mixin text-breadcrumbs() {
+  @include text-styles($font-size-xs, $line-height-s, 400);
+}
+
+@mixin text-badge() {
+  @include text-styles($font-size-s, $line-height-s, 700);
+}
+
+@mixin text-form-label() {
+  @include text-styles($font-size-base, $line-height-m, 600);
+}
+
+@mixin subtitle-bold() {
+  @include text-styles($font-size-base, $line-height-l, 700);
+}
+
+@mixin link-primary {
+  color: var(--primary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-accent);
+    text-decoration: underline;
+  }
+}
