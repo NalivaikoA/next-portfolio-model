@@ -53,13 +53,13 @@
   gap: 0.1em;
   font-size: 5rem;
   position: relative;
+  transform: translateY(-170px);
 
   @media (max-width: 760px) {
     font-size: 4rem;
   }
 
   @media (max-width: 580px) {
-    transform: translateY(-170px);
     font-size: 3rem;
     gap: 5px;
   }
